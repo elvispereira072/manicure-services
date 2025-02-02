@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Tags para SEO -->
+    <meta name="description" content="O Manicure Studio oferece os melhores serviços de manicure e pedicure da cidade. Faça suas unhas por profissionais experientes.">
+    <meta name="keywords" content="manicure, pedicure, arte de unhas, salão de beleza, Manicure Studio">
+    <meta name="author" content="Manicure Studio">
+    <!-- Open Graph Meta Tags (para redes sociais) -->
+    <meta property="og:title" content="Manicure Studio">
+    <meta property="og:description" content="O Manicure Studio oferece os melhores serviços de manicure e pedicure da cidade. Faça suas unhas por profissionais experientes.">
+    <meta property="og:image" content="URL-da-imagem-de-capa-ou-produto.jpg">
+    <meta property="og:url" content="https://www.seusalon.com">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Manicure Studio">
+    <meta name="twitter:description" content="O Manicure Studio oferece os melhores serviços de manicure e pedicure da cidade. Faça suas unhas por profissionais experientes.">
+    <meta name="twitter:image" content="URL-da-imagem-de-capa-ou-produto.jpg">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/Foto2.jpeg" type="image/x-icon">
+    <!-- Título da Página -->
+    <title>Manicure Studio</title>
+    <!-- Link para o TailwindCSS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<style>
+    /* Custom Styles */
+    .menu-bg {
+        background: linear-gradient(135deg, red, red);
+    }
+
+    .btn-pink {
+        background-color: red;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn-pink:hover {
+        background-color: red;
+        transform: scale(1.05);
+    }
+
+    .hero-bg {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-bg video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        animation: fadeInUp 1s ease-in-out;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg,rgb(0, 0, 0)), rgba(250, 208, 196, 0.8);
+        z-index: 0;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+      /* Adicionando animação ao ícone flutuante do WhatsApp */
+.whatsapp-icon {
+    animation: shake 1.5s infinite;
+    transition: transform 0.3s;
+}
+
+/* Efeito de "balanço" */
+@keyframes shake {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+}
+
+/* Efeito ao passar o mouse */
+.whatsapp-icon:hover {
+    transform: scale(1.2);
+}
+
+
+/* Efeito especial de brilho pulsante */
+.whatsapp-icon {
+    animation: shake 1.5s infinite, pulseGlow 2s infinite;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+/* Efeito de "balanço" */
+@keyframes shake {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+}
+
+/* Efeito de brilho pulsante */
+@keyframes pulseGlow {
+    0% {
+        filter: brightness(1) blur(0);
+    }
+    50% {
+        filter: brightness(1.5) blur(2px);
+    }
+    100% {
+        filter: brightness(1) blur(0);
+    }
+}
+
+/* Efeito ao passar o mouse */
+.whatsapp-icon:hover {
+    transform: scale(1.2) rotate(0deg); /* Zoom */
+    filter: brightness(1.3); /* Aumenta o brilho ao passar o mouse */
+}
+
+/* Efeito de brilho suave */
+.whatsapp-icon {
+    animation: shake 1.5s infinite;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+/* Efeito de "balanço" */
+@keyframes shake {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+}
+
+/* Efeito de brilho ao passar o mouse */
+.whatsapp-icon:hover {
+    transform: scale(1.2) rotate(0deg); /* Zoom */
+    filter: brightness(1.5) contrast(1.5); /* Intensifica o brilho e o contraste */
+}
+
+
+/* Efeito de estrela (brilho e tremor) */
+.whatsapp-icon {
+    animation: shake 1.5s infinite, flicker 1.2s infinite;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+/* Efeito de "balanço" */
+@keyframes shake {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+}
+
+/* Efeito de "flicker" */
+@keyframes flicker {
+    0%, 100% {
+        filter: brightness(1.2) contrast(1);
+    }
+    50% {
+        filter: brightness(2) contrast(1.5);
+    }
+}
+
+/* Efeito ao passar o mouse */
+.whatsapp-icon:hover {
+    transform: scale(1.2) rotate(0deg); /* Zoom */
+    filter: brightness(1.5); /* Aumenta o brilho */
+}
+
+/* Efeito glitch */
+.whatsapp-icon {
+    animation: shake 1.5s infinite, glitch 1s infinite;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+/* Efeito de "balanço" */
+@keyframes shake {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+}
+
+/* Efeito de glitch */
+@keyframes glitch {
+    0% {
+        transform: translateX(0);
+        filter: brightness(1);
+    }
+    10% {
+        transform: translateX(-2px);
+        filter: brightness(2);
+    }
+    20% {
+        transform: translateX(2px);
+        filter: brightness(1);
+    }
+    30% {
+        transform: translateX(-2px);
+        filter: brightness(2);
+    }
+    40% {
+        transform: translateX(2px);
+        filter: brightness(1);
+    }
+    100% {
+        transform: translateX(0);
+        filter: brightness(1);
+    }
+}
+
+/* Efeito ao passar o mouse */
+.whatsapp-icon:hover {
+    transform: scale(1.2) rotate(0deg); /* Zoom */
+    filter: brightness(1.5); /* Aumenta o brilho */
+}
+
+/* Efeito neon */
+.whatsapp-icon {
+    animation: shake 1.5s infinite;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito de "balanço" */
+@keyframes shake {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+}
+
+/* Efeito neon ao passar o mouse */
+.whatsapp-icon:hover {
+    transform: scale(1.2) rotate(0deg); /* Zoom */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8), 0 0 30px rgba(0, 255, 0, 0.8); /* Brilho neon */
+}
+    
+   </style>
+</head>
+
+<body class="bg-pink-50">
+
+<!-- Navbar -->
+<nav class="menu-bg p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <div class="text-white font-bold text-2xl">Manicure Studio</div>
+        <div class="hidden md:flex space-x-6">
+            <a href="#home" class="text-white hover:text-gray-300">Inicio</a>
+            <a href="#services" class="text-white hover:text-gray-300">Servicos</a>
+            <a href="#gallery" class="text-white hover:text-gray-300">Galeria</a>
+            <a href="#testimonials" class="text-white hover:text-gray-300">Testemunhos</a>
+            <a href="#contact" class="text-white hover:text-gray-300">Contato</a>
+            <a href="sobre.html" class="text-white hover:text-gray-300">Preços de nossos serviços</a>
+        </div>
+        <button id="menu-btn" class="block md:hidden text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </div>
+    <div id="menu" class="md:hidden mt-2 hidden flex flex-col space-y-2">
+        <a href="#home" class="text-white hover:text-gray-300">Inicio</a>
+        <a href="#services" class="text-white hover:text-gray-300">Servicos</a>
+        <a href="#gallery" class="text-white hover:text-gray-300">Galeria</a>
+        <a href="#testimonials" class="text-white hover:text-gray-300">Testemunhos</a>
+        <a href="#contact" class="text-white hover:text-gray-300">Contato</a>
+        <a href="sobre.html" class="text-white hover:text-gray-300">Preços de nossos serviços</a>
+    </div>
+</nav>
+
+<!-- Home Section -->
+<section id="home" class="hero-bg">
+    <video autoplay muted loop>
+        <source src="assets/Video.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content text-center">
+        <h1 class="text-5xl text-white font-bold">Bem vindo a manicure studio</h1>
+        <p class="mt-4 text-white">Sua beleza, minha paixão.</p>
+        <a href="#services" class="mt-6 inline-block btn-pink text-white px-6 py-2 rounded-full shadow-lg">Explorar Serviços</a>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-20 bg-red-400">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-pink-700" data-aos="fade-up"></h2>
+        <div class="mt-8 flex flex-wrap justify-center">
+            <!-- Service Item -->
+            <div class="max-w-sm p-4 m-4 bg-white shadow-lg rounded-lg" data-aos="zoom-in">
+                <img src="assets/Foto6.webp" alt="Service" class="rounded-t-lg">
+                <h3 class="mt-4 text-xl font-bold text-pink-700">Manicure</h3>
+                <p class="mt-2 text-gray-700">Desfrute de uma relaxante sessão de nossos serviços.</p>
+            </div>
+            <!-- More services here -->
+        </div>
+    </div>
+</section>
+
+<section id="services" class="py-20 bg-red-400">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-pink-700" data-aos="fade-up"></h2>
+        <div class="mt-8 flex flex-wrap justify-center">
+            <!-- Service Item -->
+            <div class="max-w-sm p-4 m-4 bg-white shadow-lg rounded-lg" data-aos="zoom-in">
+                <img src="assets/Foto7.webp" alt="Service" class="rounded-t-lg">
+                <h3 class="mt-4 text-xl font-bold text-pink-700">Manicure</h3>
+                <p class="mt-2 text-gray-700">Marque sua sessão agora.
+            </div>
+            <!-- More services here -->
+        </div>
+    </div>
+</section>
+
+<section id="services" class="py-20 bg-red-400">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-pink-700" data-aos="fade-up"></h2>
+        <div class="mt-8 flex flex-wrap justify-center">
+            <!-- Service Item -->
+            <div class="max-w-sm p-4 m-4 bg-white shadow-lg rounded-lg" data-aos="zoom-in">
+                <img src="assets/Foto5.webp" alt="Service" class="rounded-t-lg">
+                <h3 class="mt-4 text-xl font-bold text-pink-700">Manicure</h3>
+                <p class="mt-2 text-gray-700">Unhas impecáveis em nossos trabalhos.
+            </div>
+            <!-- More services here -->
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="py-20 bg-red-200">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-pink-700" data-aos="fade-up">Entre em contato.
+        <div class="mt-8 flex flex-wrap justify-center">
+            <!-- Gallery Item -->
+            <div class="max-w-sm p-4 m-4" data-aos="zoom-in">
+                <img src="assets/Foto2.jpeg" alt="Gallery Image" class="rounded-lg shadow-lg">
+            </div>
+            <!-- More gallery items here -->
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-20 bg-blue-500">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-pink-700" data-aos="fade-up">Testemunhos</h2>
+        <div class="mt-8 flex flex-wrap justify-center">
+            <!-- Testimonial Item 1 -->
+            <div class="max-w-sm p-4 m-4 bg-white shadow-lg rounded-lg" data-aos="zoom-in">
+                <p class="text-gray-700">"A melhor manicure que já experimentei! Eu recomendo a todos."</p>
+                <h3 class="mt-4 text-xl font-bold text-pink-700">- Cliente Satisfeita</h3>
+            </div>
+            <!-- Testimonial Item 2 -->
+            <div class="max-w-sm p-4 m-4 bg-white shadow-lg rounded-lg" data-aos="zoom-in">
+                <p class="text-gray-700">"O serviço foi incrível e a qualidade dos serviços é excepcional. Eu recomendo!"</p>
+                <h3 class="mt-4 text-xl font-bold text-pink-700">- Joana M.</h3>
+            </div>
+            <!-- Testimonial Item 4 -->
+            <div class="max-w-sm p-4 m-4 bg-white shadow-lg rounded-lg" data-aos="zoom-in">
+                <p class="text-gray-700">"Serviço maravilhoso! Minhas unhas nunca pareceram tão perfeitas. Eu recomendo!"</p>
+                <h3 class="mt-4 text-xl font-bold text-pink-700">- Larissa B.</h3>
+            </div>
+            <!-- Testimonial Item 5 -->
+            <div class="max-w-sm p-4 m-4 bg-white shadow-lg rounded-lg" data-aos="zoom-in">
+                <p class="text-gray-700">"Adorei minha experiência! Super satisfeito!"</p>
+                <h3 class="mt-4 text-xl font-bold text-pink-700">- Camila L.</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-white-200">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-black-500" data-aos="fade-up">Servicos</h2>
+        <p class="mt-4 text-gray-700" data-aos="fade-up">Fique à vontade para entrar em contato para agendamento ou qualquer dúvida.</p>
+        <p class="mt-4 text-gray-700" data-aos="fade-up">WhatsApp:(13) 9xxxxxxxx</p>
+        <div class="mt-8" data-aos="fade-up">
+    </div>
+</section>
+
+<!-- Ícone flutuante do WhatsApp -->
+<div class="fixed right-5 bottom-5">
+    <a href="https://wa.me/5513981430940" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+             alt="WhatsApp" 
+             class="w-16 h-16 whatsapp-icon">
+    </a>
+</div>
+
+<!-- Footer -->
+<footer class="bg-blue-900 text-white text-center py-6">
+<p>&copy; 2024 Manicure Studio | Todos os direitos reservados.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();
+
+    document.getElementById("menu-btn").addEventListener("click", function() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("hidden");
+    });
+</script>
+</body>
+</html>
