@@ -63,6 +63,16 @@ O projeto é composto por um arquivo HTML principal que contém todas as seçõe
 
 1. Substitua os marcadores `[seu_número]` com seu número de telefone no formato internacional para que os links do WhatsApp funcionem corretamente.
 
+Preço Total Aproximado:
+O valor total para o desenvolvimento do site pode variar entre R$ 2.500,00 a R$ 5.500,00, dependendo da complexidade do design e das funcionalidades solicitadas, como agendamento via WhatsApp, animações personalizadas e outros elementos interativos.
+
+Outros Fatores a Considerar:
+Tempo de entrega: Este projeto pode ser concluído em 1 a 3 semanas, dependendo do seu tempo disponível e da colaboração com o cliente.
+
+Requisitos extras: Caso o cliente deseje funcionalidades adicionais, como integração com redes sociais ou uma plataforma de pagamento, isso pode aumentar o valor final.
+
+Assim como o primeiro projeto, o valor pode ser ajustado conforme sua experiência, a demanda do cliente e a qualidade do serviço oferecido.
+
 
 
 
